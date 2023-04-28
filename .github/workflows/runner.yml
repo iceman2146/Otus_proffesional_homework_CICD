@@ -6,23 +6,19 @@ jobs:
   test-check:
     name: 📊 test checks
     uses: ./.github/workflows/test_check.yml
-    env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
   linux-build:
     name: 🐧 Linux
     needs: test-check
     uses: ./.github/workflows/Linux.yml
-    env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
   macos-build:
     name: 🍎 macOS
     needs: test-check
     uses: ./.github/workflows/MacOS.yml
-    env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
   windows-build:
     name: 🏁 Windows
     needs: test-check
     uses: ./.github/workflows/Windows.yml
-    env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
