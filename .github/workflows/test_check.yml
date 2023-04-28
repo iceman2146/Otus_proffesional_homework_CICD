@@ -11,5 +11,7 @@ jobs:
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
       - run: cmake --build . --target test
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      
     
