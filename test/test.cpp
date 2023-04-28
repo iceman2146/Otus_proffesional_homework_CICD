@@ -18,7 +18,7 @@ TEST(Verion, AboveZero) {
     // Arrange
     // Act 
     // Assert
-    ASSERT_TRUE(version()<0);
+    ASSERT_TRUE(version()>0);
 }
 
 
