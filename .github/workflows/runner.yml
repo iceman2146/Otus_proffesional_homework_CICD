@@ -1,6 +1,6 @@
 name: 
 on: 
-  push
+  push:
 
 jobs:
   test-check:
