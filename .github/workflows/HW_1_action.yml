@@ -1,7 +1,7 @@
 name: Homework_git_action
 
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} CICD домашечка 🚀
 on:
   push:
     branches:
