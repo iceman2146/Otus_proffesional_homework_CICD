@@ -1,0 +1,24 @@
+name: 
+on: 
+  push:
+    branches:
+      - main
+      - feature/github_actions
+
+jobs:
+  test-check:
+    name: 📊 Static checks
+    uses: ./.github/workflows/test_check.yml
+
+  linux-build:
+    name: 🐧 Linux
+    needs: test-check
+    uses: ./.github/workflows/linux.yml
+  macos-build:
+    name: 🍎 macOS
+    needs: test-check
+    uses: ./.github/workflows/macos.yml
+  windows-build:
+    name: 🏁 Windows
+    needs: test-check
+    uses: ./.github/workflows/windows.yml

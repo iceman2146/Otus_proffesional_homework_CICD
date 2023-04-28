@@ -1,12 +1,9 @@
-name: Homework_git_action
+name: Linux
 
 
-run-name: ${{ github.actor }} CICD домашечка 🚀
+run-name: ${{ github.actor }} Linux  CICD домашечка 
 on:
-  push:
-    branches:
-      - main
-      - feature/github_actions
+   workflow_call:
 
 jobs:
   build:
