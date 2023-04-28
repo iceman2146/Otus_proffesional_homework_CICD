@@ -1,6 +1,7 @@
 //#define BOOST_TEST_MODULE test_version
 
 #include "lib.h"
+#include <gtest/gtest.h>
 
 /*include <boost/test/unit_test.hpp>
 
@@ -13,6 +14,15 @@ BOOST_AUTO_TEST_CASE(test_valid_version)
 
 BOOST_AUTO_TEST_SUITE_END()
 */
+TEST(Verion, AboveZero) {
+    // Arrange
+    // Act 
+    // Assert
+    ASSERT_TRUE(version()>0);
+}
 
 
-
+int main(int argc, char** argv) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

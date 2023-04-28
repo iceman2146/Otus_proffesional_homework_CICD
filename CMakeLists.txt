@@ -44,7 +44,7 @@ target_include_directories(
 )
 target_link_libraries(
     test_version PRIVATE
-    gtest gtest_main
+    gtest gtest_main lib
 )
 
 set_target_properties(lib helloworld_cli test_version PROPERTIES
