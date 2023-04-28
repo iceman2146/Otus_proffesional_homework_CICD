@@ -1,9 +1,6 @@
 name: test_check
 on:
-  push:
-    branches:
-      - main
-      - feature/github_actions
+  workflow_call:
 
 jobs:
   build:

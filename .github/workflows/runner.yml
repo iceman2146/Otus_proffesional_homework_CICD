@@ -1,9 +1,6 @@
 name: 
 on: 
-  push:
-    branches:
-      - main
-      - feature/github_actions
+  push
 
 jobs:
   test-check:
