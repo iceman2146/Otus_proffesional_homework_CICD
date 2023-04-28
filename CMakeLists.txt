@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
+
 project(Homework_1 VERSION ${PROJECT_VESRION})
 
 
@@ -11,12 +12,15 @@ configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli main.cpp)
 
+
 set_target_properties(helloworld_cli PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
 ##
-
+target_include_directories(helloworld_cli
+    PRIVATE "${CMAKE_BINARY_DIR}"
+    )
 if (MSVC)
     target_compile_options(helloworld_cli PRIVATE
         /W4
