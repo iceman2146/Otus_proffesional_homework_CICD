@@ -1,4 +1,4 @@
-name: Windows
+name: windows-build
 
 
 run-name: ${{ github.actor }} Windows CICD домашечка 

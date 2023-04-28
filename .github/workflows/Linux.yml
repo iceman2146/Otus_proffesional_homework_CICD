@@ -1,4 +1,4 @@
-name: Linux
+name: linux-build
 
 
 run-name: ${{ github.actor }} Linux  CICD домашечка 

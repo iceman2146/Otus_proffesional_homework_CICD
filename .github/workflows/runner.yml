@@ -7,18 +7,18 @@ on:
 
 jobs:
   test-check:
-    name: 📊 Static checks
+    name: 📊 test checks
     uses: ./.github/workflows/test_check.yml
 
   linux-build:
     name: 🐧 Linux
     needs: test-check
-    uses: ./.github/workflows/linux.yml
+    uses: ./.github/workflows/Linux.yml
   macos-build:
     name: 🍎 macOS
     needs: test-check
-    uses: ./.github/workflows/macos.yml
+    uses: ./.github/workflows/MacOS.yml
   windows-build:
     name: 🏁 Windows
     needs: test-check
-    uses: ./.github/workflows/windows.yml
+    uses: ./.github/workflows/Windows.yml

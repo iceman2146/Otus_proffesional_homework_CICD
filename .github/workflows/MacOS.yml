@@ -1,4 +1,4 @@
-name: MacOS
+name: macos-build
 
 
 run-name: ${{ github.actor }} MacOS CICD домашечка 
