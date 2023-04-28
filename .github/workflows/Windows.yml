@@ -3,7 +3,6 @@ name: Windows
 
 run-name: ${{ github.actor }} Windows CICD домашечка 
 on:
-  push:
      workflow_call:
 
 jobs:

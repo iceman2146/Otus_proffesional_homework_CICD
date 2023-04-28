@@ -19,6 +19,10 @@ execute_process(COMMAND ${CMAKE_COMMAND} --build .
 if(result)
   message(FATAL_ERROR "Build step for googletest failed: ${result}")
 endif()
+
+if(MSVC)
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif()
 ##загрузили
 
 add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
