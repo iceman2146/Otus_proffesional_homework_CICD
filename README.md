@@ -2,7 +2,7 @@
 # Домашка №1
 #
 #
-# apt update && apt install -y helloworld-0.0.X-Linux.deb
+# apt update && apt install -y Homework_1-0.0.X-Linux.deb
 # (вместо X – номер билда), запуска бинарного файла:
 # helloworld_cli
 # появилось сообщение:
