@@ -1,6 +1,9 @@
 name: MultiOS
 on: 
   push:
+    branches:
+      - main
+      - feature/github_actions
 
 jobs:
   test-check:
