@@ -8,20 +8,24 @@ on:
 jobs:
   test-check:
     name: 📊 test checks
+    permissions: write-all
     uses: ./.github/workflows/test_check.yml
     
   linux-build:
     name: 🐧 Linux
+    permissions: write-all
     needs: test-check
     uses: ./.github/workflows/Linux.yml
     
   macos-build:
     name: 🍎 macOS
+    permissions: write-all
     needs: test-check
     uses: ./.github/workflows/MacOS.yml
     
   windows-build:
     name: 🏁 Windows
+    permissions: write-all
     needs: test-check
     uses: ./.github/workflows/Windows.yml
     
